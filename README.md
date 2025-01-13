@@ -17,7 +17,6 @@ Dette prosjektet estimerer priser på biler basert på ulike egenskaper som prod
   - Scatterplot som viser sammenheng mellom produksjonsår og pris.
 - Prisestimering: Eksempeldata brukes til å forutsi prisen på en bil.
 
-## Hvordan kjøre koden
-1. Sørg for at du har installert nødvendige Python-biblioteker:
-   ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn
+## Resultater
+- Modellen oppnår en R²-score på 0.94, noe som indikerer høy nøyaktighet i prediksjonene.
+- Diagrammer gir visuell innsikt i datafordeling og sammenhenger mellom variabler.
