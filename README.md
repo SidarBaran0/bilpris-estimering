@@ -1,22 +1,21 @@
-# Bilpris Estimering
+Dette prosjektet estimerer priser på biler basert på ulike egenskaper som produksjonsår, kjørelengde, drivstofftype og girtype. Prosjektet benytter ensemble-metoder, inkludert Stacking, for å oppnå høy presisjon i prediksjonene.
 
-Dette prosjektet estimerer priser på biler basert på ulike egenskaper som produksjonsår, kilometerstand, drivstofftype, og girtype. Prosjektet bruker maskinlæringsmodellen Gradient Boosting for å forutsi priser med høy nøyaktighet.
-
-## Teknologier
-- **Programmeringsspråk**: Python
-- **Biblioteker**: 
-  - `pandas`, `numpy`, `seaborn`, `matplotlib` for dataanalyse og visualisering.
-  - `scikit-learn` for maskinlæring.
-
-## Funksjoner
-- Dataforberedelse: Fjerner manglende verdier og konverterer kategoriske variabler til numeriske ved hjelp av One-Hot Encoding.
-- Modelltrening: Gradient Boosting-modellen brukes til å trene på dataene og evaluere prediksjonsnøyaktigheten.
-- Visualiseringer: 
-  - Histogram for prisfordeling.
-  - Korrelasjonskart for å vise sammenhenger mellom variabler.
-  - Scatterplot som viser sammenheng mellom produksjonsår og pris.
-- Prisestimering: Eksempeldata brukes til å forutsi prisen på en bil.
-
-## Resultater
-- Modellen oppnår en R²-score på 0.94, noe som indikerer høy nøyaktighet i prediksjonene.
-- Diagrammer gir visuell innsikt i datafordeling og sammenhenger mellom variabler.
+Teknologier
+Programmeringsspråk: Python
+Biblioteker:
+pandas, numpy, seaborn, matplotlib for dataanalyse og visualisering.
+scikit-learn for maskinlæring.
+Funksjoner
+Dataforberedelse:
+Fjerner manglende verdier.
+Konverterer kategoriske variabler til numeriske med One-Hot Encoding.
+Skalerer numeriske variabler med StandardScaler.
+Modelltrening:
+Gradient Boosting og Random Forest brukes som base-modeller.
+Stacking-modellen kombinerer disse to modellene med en Linear Regression som meta-learner for å forbedre prediksjonsnøyaktigheten.
+Visualiseringer:
+Histogram for prisfordeling.
+Korrelasjonskart for å vise sammenhenger mellom variabler.
+Scatterplot som viser forholdet mellom produksjonsår og pris.
+Prisestimering:
+Eksempeldata brukes til å forutsi prisen på en bil ved hjelp av den mest presise modellen (Stacking).
